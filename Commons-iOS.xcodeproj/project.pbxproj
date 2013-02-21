@@ -18,6 +18,9 @@
 		65137D2016BE69B8006FA9BD /* libOCMock.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 65137D1816BE69B8006FA9BD /* libOCMock.a */; };
 		655BF5EF16C1052D00B22299 /* StorageTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 655BF5EE16C1052D00B22299 /* StorageTools.m */; };
 		655BF5F016C1052D00B22299 /* StorageTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 655BF5EE16C1052D00B22299 /* StorageTools.m */; };
+		656D6CAB16D63191000D2A41 /* SelectorTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 656D6CAA16D63191000D2A41 /* SelectorTest.m */; };
+		656D6CAE16D63292000D2A41 /* MWApi+Testing.m in Sources */ = {isa = PBXBuildFile; fileRef = 656D6CAD16D63292000D2A41 /* MWApi+Testing.m */; };
+		656D6CB016D63796000D2A41 /* MWApiTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 656D6CAF16D63796000D2A41 /* MWApiTest.m */; };
 		65C4D53D16CCE10B0077E0A2 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4086170169B760800D6ACB0 /* UIKit.framework */; };
 		65C4D53E16CCE10B0077E0A2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4086172169B760800D6ACB0 /* Foundation.framework */; };
 		65C4D53F16CCE10B0077E0A2 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4086174169B760800D6ACB0 /* CoreGraphics.framework */; };
@@ -211,6 +214,10 @@
 		65137D1F16BE69B8006FA9BD /* OCMockRecorder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCMockRecorder.h; sourceTree = "<group>"; };
 		655BF5ED16C1052D00B22299 /* StorageTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StorageTools.h; sourceTree = "<group>"; };
 		655BF5EE16C1052D00B22299 /* StorageTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StorageTools.m; sourceTree = "<group>"; };
+		656D6CAA16D63191000D2A41 /* SelectorTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SelectorTest.m; sourceTree = "<group>"; };
+		656D6CAC16D63292000D2A41 /* MWApi+Testing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MWApi+Testing.h"; sourceTree = "<group>"; };
+		656D6CAD16D63292000D2A41 /* MWApi+Testing.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MWApi+Testing.m"; sourceTree = "<group>"; };
+		656D6CAF16D63796000D2A41 /* MWApiTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MWApiTest.m; sourceTree = "<group>"; };
 		65C4D53C16CCE10B0077E0A2 /* Commons-iOS-GHUnit-Testing.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Commons-iOS-GHUnit-Testing.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		65C4D54216CCE10B0077E0A2 /* Commons-iOS-GHUnit-Testing-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Commons-iOS-GHUnit-Testing-Info.plist"; sourceTree = "<group>"; };
 		65C4D54416CCE10B0077E0A2 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
@@ -420,10 +427,14 @@
 		65C4D54016CCE10B0077E0A2 /* Commons-iOS-GHUnit-Testing */ = {
 			isa = PBXGroup;
 			children = (
+				656D6CAC16D63292000D2A41 /* MWApi+Testing.h */,
+				656D6CAD16D63292000D2A41 /* MWApi+Testing.m */,
 				65C4D54116CCE10B0077E0A2 /* Supporting Files */,
 				65C4D58C16CCE37F0077E0A2 /* LoginTest.m */,
 				65D839AE16D056CA00C0371A /* LocalizationTest.m */,
 				65D839B116D08F9200C0371A /* DataTest.m */,
+				656D6CAA16D63191000D2A41 /* SelectorTest.m */,
+				656D6CAF16D63796000D2A41 /* MWApiTest.m */,
 			);
 			path = "Commons-iOS-GHUnit-Testing";
 			sourceTree = "<group>";
@@ -941,6 +952,9 @@
 				65C4D58D16CCE37F0077E0A2 /* LoginTest.m in Sources */,
 				65D839AF16D056CA00C0371A /* LocalizationTest.m in Sources */,
 				65D839B216D08F9200C0371A /* DataTest.m in Sources */,
+				656D6CAB16D63191000D2A41 /* SelectorTest.m in Sources */,
+				656D6CAE16D63292000D2A41 /* MWApi+Testing.m in Sources */,
+				656D6CB016D63796000D2A41 /* MWApiTest.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

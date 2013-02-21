@@ -19,7 +19,12 @@
 
 -(void)setUp
 {
-    self.app = CommonsApp.singleton;
+    self.app = [CommonsApp singleton];
+
+    // no user account case
+    self.app.username = @"";
+    self.app.password = @"";
+    [self.app saveCredentials];
 }
 
 /**

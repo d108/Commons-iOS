@@ -8,10 +8,16 @@
 
 #import <GHUnitIOS/GHUnit.h>
 #import "MWApi.h"
+#import "CommonsApp.h"
+#import "MWApi+Testing.h"
 
 @interface LoginTest : GHAsyncTestCase
 
-@property(nonatomic, strong) NSURL *url;
+@property (nonatomic, strong) NSURL *url;
+@property (nonatomic, strong) MWApi *api;
+@property (nonatomic, strong) CommonsApp *app;
+@property (nonatomic, copy) NSString *username;
+@property (nonatomic, copy) NSString *password;
 
 @end
 
@@ -26,6 +32,27 @@
 {
     NSString *wikiURLBase = @"https://test.wikipedia.org";
     self.url = [NSURL URLWithString:[wikiURLBase stringByAppendingString:@"/w/api.php"]];
+    self.api = [[MWApi alloc] initWithApiUrl:self.url];
+    self.app = [CommonsApp singleton];
+
+    [self.app initializeApp];
+
+    self.username = @"BadUsername";
+    self.password = @"BadPassword";
+}
+
+/**
+ * Test credential saving.
+ */
+-(void)testSaveCredentials
+{
+    CommonsApp *app = [CommonsApp singleton];
+    app.username = self.username;
+    app.password = self.password;
+    [app saveCredentials];
+    [app loadCredentials];
+    GHAssertEqualStrings(self.username, app.username, @"App username is saved.");
+    GHAssertEqualStrings(self.password, app.password, @"App password is saved.");
 }
 
 /**
@@ -35,19 +62,14 @@
 {
     [self prepare];
 
-    MWApi *api = [[MWApi alloc] initWithApiUrl:self.url];
-
-    NSString *username = @"BadUsername";
-    NSString *password = @"BadPassword";
-
-    MWPromise *login = [api loginWithUsername:username
-                                  andPassword:password];
+    MWPromise *login = [self.api loginWithUsername:self.username
+                                       andPassword:self.password];
 
     [login done:^(NSDictionary *loginResult) {
 
         NSLog(@"login: %@", loginResult[@"login"][@"result"]);
 
-        if (api.isLoggedIn) {
+        if (self.api.isLoggedIn) {
             [self notify:kGHUnitWaitStatusFailure forSelector:_cmd];
         } else {
             // Credentials invalid
@@ -62,6 +84,23 @@
     }];
 
     [self waitForStatus:kGHUnitWaitStatusSuccess timeout:15.0];
+}
+
+/**
+ * Test logging out.
+ * @todo make into a real test of logging out, but first need to be logged in.
+ */
+-(void)testLogout
+{
+    [self.api setIsLoggedIn:YES];
+    [self.api logout];
+    if(self.api.isLoggedIn == TRUE){
+        NSLog(@"isLoggedIn is TRUE");
+    } else {
+        NSLog(@"isLoggedIn is FALSE");
+    }
+
+    GHAssertTrue(self.api.isLoggedIn, @"Logged in value was set.");
 }
 
 @end
