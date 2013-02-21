@@ -46,13 +46,12 @@
  */
 -(void)testSaveCredentials
 {
-    CommonsApp *app = [CommonsApp singleton];
-    app.username = self.username;
-    app.password = self.password;
-    [app saveCredentials];
-    [app loadCredentials];
-    GHAssertEqualStrings(self.username, app.username, @"App username is saved.");
-    GHAssertEqualStrings(self.password, app.password, @"App password is saved.");
+    self.app.username = self.username;
+    self.app.password = self.password;
+    [self.app saveCredentials];
+    [self.app loadCredentials];
+    GHAssertEqualStrings(self.username, self.app.username, @"App username is saved.");
+    GHAssertEqualStrings(self.password, self.app.password, @"App password is saved.");
 }
 
 /**
