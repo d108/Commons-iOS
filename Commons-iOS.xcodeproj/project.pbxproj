@@ -18,9 +18,8 @@
 		65137D2016BE69B8006FA9BD /* libOCMock.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 65137D1816BE69B8006FA9BD /* libOCMock.a */; };
 		655BF5EF16C1052D00B22299 /* StorageTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 655BF5EE16C1052D00B22299 /* StorageTools.m */; };
 		655BF5F016C1052D00B22299 /* StorageTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 655BF5EE16C1052D00B22299 /* StorageTools.m */; };
-		656D6CAB16D63191000D2A41 /* SelectorTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 656D6CAA16D63191000D2A41 /* SelectorTest.m */; };
 		656D6CAE16D63292000D2A41 /* MWApi+Testing.m in Sources */ = {isa = PBXBuildFile; fileRef = 656D6CAD16D63292000D2A41 /* MWApi+Testing.m */; };
-		656D6CB016D63796000D2A41 /* MWApiTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 656D6CAF16D63796000D2A41 /* MWApiTest.m */; };
+		6590F7BD16D6FFFB005FED65 /* MWApiTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 656D6CAF16D63796000D2A41 /* MWApiTest.m */; };
 		65C4D53D16CCE10B0077E0A2 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4086170169B760800D6ACB0 /* UIKit.framework */; };
 		65C4D53E16CCE10B0077E0A2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4086172169B760800D6ACB0 /* Foundation.framework */; };
 		65C4D53F16CCE10B0077E0A2 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4086174169B760800D6ACB0 /* CoreGraphics.framework */; };
@@ -952,9 +951,8 @@
 				65C4D58D16CCE37F0077E0A2 /* LoginTest.m in Sources */,
 				65D839AF16D056CA00C0371A /* LocalizationTest.m in Sources */,
 				65D839B216D08F9200C0371A /* DataTest.m in Sources */,
-				656D6CAB16D63191000D2A41 /* SelectorTest.m in Sources */,
 				656D6CAE16D63292000D2A41 /* MWApi+Testing.m in Sources */,
-				656D6CB016D63796000D2A41 /* MWApiTest.m in Sources */,
+				6590F7BD16D6FFFB005FED65 /* MWApiTest.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
