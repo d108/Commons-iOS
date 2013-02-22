@@ -29,15 +29,4 @@
     self.api = [[MWApi alloc] initWithApiUrl:self.url];
 }
 
-/**
- * Test logging out.
- */
-//-(void)testLogout
-//{
-//    [self.api setIsLoggedIn:YES];
-//    [self.api logout];
-//    NSLog(@"%@", self.api.isLoggedIn);
-//    GHAssertFalse(self.api.isLoggedIn, @"Is logged in is FALSE.");
-//}
-
 @end
